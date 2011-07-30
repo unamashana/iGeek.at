@@ -480,7 +480,7 @@ header {
 		text-align:left;
 		border:2px solid #333;
 	
-		opacity:0.8;
+		opacity: 1;
 		-moz-border-radius:6px;
 		-webkit-border-radius:6px;
 		-moz-box-shadow: 0 0 50px #ccc;
