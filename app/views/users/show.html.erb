@@ -22,19 +22,18 @@
 <div id="sidebar">
   <div class="pic_n_id">
     <div class="pic">
-      <%= image_tag current_user_info['user_info']['image'] %>
+      <%= image_tag @user.image_url %>
     </div> 
 
     <div class="geekid">
-      <h3><%= current_user.geek_id %></h3>
+      <h3><%= @user.geek_id %></h3>
     </div>
   </div>  
 
   <div class="name">
-    <%= current_user_info['user_info']['name'] %> 
+    <%= @user.name %> 
   </div>
 
   <div class="twitter">
-    @<%= current_user_info['user_info']['nickname'] %>
   </div>
 </div>

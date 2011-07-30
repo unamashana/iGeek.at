@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
 
   respond_to :html
+  layout 'app'
 
   def new
     @product = Product.new
