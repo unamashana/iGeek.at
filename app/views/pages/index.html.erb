@@ -3,6 +3,23 @@
   <link href="http://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Cantarell:regular,italic,bold" rel="stylesheet" type="text/css">
 
+  <script>
+    $(document).ready(function(){
+      $("#trigger").click(function(){
+      $("#wufoo").overlay({
+	top: 60,
+	mask: {
+		color: '#fff',
+		loadSpeed: 200,
+		opacity: 0.5
+	},
+
+	closeOnClick: true,
+	load: true
+      });
+    });
+    });
+  </script>
    <div id="pattern"><div id="gradient">
 
     <!-- Image background -->
@@ -23,8 +40,11 @@
 	  <!-- Additional content -->
 	  <div id="content"> &nbsp;
 	  
-		  
-		  <!-- Twitter -->
+            <section>
+              <div id="trigger">Reserve your Geek ID Now!!!</div>
+            </section>
+
+            <!-- Twitter -->
 		  <script src="javascripts/jquery.tweet.js"></script> <!-- Load jQuery Twitter library -->
 		  <script>
 			$(function() {
@@ -49,4 +69,8 @@
 	<!-- Main page end -->
 
 	
-  </div></div>
+    </div></div>
+
+    <div id="wufoo" class="modal">
+      <iframe height="320" allowTransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none"  src="http://techfolder.wufoo.com/embed/r7x3s5/"><a href="http://techfolder.wufoo.com/forms/r7x3s5/" title="Reserve your Geek ID">Fill out my Wufoo form!</a></iframe>
+    </div>
