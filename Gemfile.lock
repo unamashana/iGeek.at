@@ -37,6 +37,10 @@ GEM
       addressable (~> 2.2.4)
       multipart-post (~> 1.1.0)
       rack (>= 1.1.0, < 2)
+    formtastic (1.2.3)
+      actionpack (>= 2.3.7)
+      activesupport (>= 2.3.7)
+      i18n (~> 0.4)
     heroku (2.4.0)
       launchy (>= 0.3.2)
       rest-client (~> 1.6.1)
@@ -134,6 +138,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  formtastic
   heroku
   omniauth
   rails (= 3.0.7)

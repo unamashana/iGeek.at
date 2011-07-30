@@ -6,9 +6,11 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user.new(params[:user])
-    @user.apply_omniauth(session[:omniauth])
-    if @user.save
+    @user = User.new(params[:user])
+    @user.provider = session[:omniauth]['provider']
+    @user.uid = session[:omniauth]['uid']
+    @user.name = session[:omniauth]['user_info']['name']
+    if @user.save!
       flash[:success] = "Signed In!!"
       session[:user_id] = @user.id
       redirect_to root_url

@@ -1,0 +1,11 @@
+<%= semantic_form_for @user do |form| %>
+
+    <%= form.inputs :name => "User" do %>
+      <%= form.input :email, :label => "Email Address" %>
+    <% end %>
+
+    <%= form.buttons do %>
+      <%= form.commit_button %>
+    <% end %>
+
+<% end %>
