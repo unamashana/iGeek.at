@@ -1,0 +1,52 @@
+<!-- Fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Cantarell:regular,italic,bold" rel="stylesheet" type="text/css">
+
+   <div id="pattern"><div id="gradient">
+
+    <!-- Image background -->
+	<div id="background_image">
+		<!-- Insert image here -->
+	</div>
+	<!-- Image background end -->
+	
+  
+	<!-- Main page -->
+    <div id="main_page">
+  
+	  <!-- Header -->
+	  <header>
+	    <h1>iGeek.at</h1> <!-- Set the page title -->
+	  </header>
+	  
+	  <!-- Additional content -->
+	  <div id="content"> &nbsp;
+	  
+		  
+		  <!-- Twitter -->
+		  <script src="javascripts/jquery.tweet.js"></script> <!-- Load jQuery Twitter library -->
+		  <script>
+			$(function() {
+				$("#tweet").tweet({			
+					username: "igeekat", // Your Twitter username
+					count: 1, // Number of tweets to show up
+					loading_text: "Loading tweets...",
+					fetch: 10, filter: function(t){ return ! /^@\w+/.test(t["tweet_raw_text"]); }, // Fetch more tweets and filter out replies
+					callback: function () {	$(".tweet_list").fadeIn(); }
+				});
+			});
+		  </script>
+		  <section class="twitter">
+			<div id="tweet"></div>
+		  </section>
+		  <!-- Twitter end -->
+
+		  
+	  </div>
+	  
+	</div>
+	<!-- Main page end -->
+
+	
+  </div></div>

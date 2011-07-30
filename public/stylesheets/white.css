@@ -1,0 +1,5 @@
+/* White color scheme */
+body { background-color: #FFFFFF; }
+header { background-image: url(../img/bg_header_white.png); }
+#progressbar { background-image: url(../img/progressbar_fill_white.png); }
+.subscribe input.submit { background-image: url(../img/form_button_white.png); }

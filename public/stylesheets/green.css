@@ -1,0 +1,5 @@
+/* Green color scheme */
+body { background-color: #339966; }
+header { background-image: url(images/bg_header_green.png); }
+#progressbar { background-image: url(images/progressbar_fill_green.png); }
+.subscribe input.submit { background-image: url(images/form_button_green.png); } 	
