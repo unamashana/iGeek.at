@@ -1,9 +1,10 @@
 class User < ActiveRecord::Base
-  def self.create_with_omniauth(auth)  
-    create! do |user|  
-      user.provider = auth["provider"]  
-      user.uid = auth["uid"]  
-      user.name = auth["user_info"]["name"]  
-    end  
+
+  validates_presence_of :provider, :uid, :name
+
+  def apply_omniauth(auth) 
+    provider = auth["provider"]
+    uid = auth["uid"] 
+    name = auth["user_info"]["name"]
   end   
 end
