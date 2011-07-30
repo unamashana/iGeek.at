@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   before_filter :authenticate, :only => [:edit, :show]
 
+  layout 'app'
+
   def new
     @user = User.new 
   end
@@ -12,7 +14,7 @@ class UsersController < ApplicationController
     @user.name = session[:omniauth]['user_info']['name']
     if @user.save
       flash[:success] = "Signed In!!"
-      session[:user_id] = @user.id
+      session[:user] = session[:omniauth]
       redirect_to geek_path(@user.geek_id)
     else
       render :new

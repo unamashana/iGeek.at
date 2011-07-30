@@ -1,1 +1,40 @@
-<%= @user.inspect %>
+<div id="content">
+  <div class="block">
+    <%= @user.inspect %>  
+  </div> 
+  <div class="block">
+    <%= @user.inspect %>  
+  </div>
+  <div class="block">
+    <%= @user.inspect %>  
+  </div>
+  <div class="block">
+    <%= @user.inspect %>  
+  </div>
+  <div class="block">
+    <%= @user.inspect %>  
+  </div>
+   <div class="block">
+    <%= @user.inspect %>  
+  </div>
+</div>
+
+<div id="sidebar">
+  <div class="pic_n_id">
+    <div class="pic">
+      <%= image_tag current_user_info['user_info']['image'] %>
+    </div> 
+
+    <div class="geekid">
+      <h3><%= current_user.geek_id %></h3>
+    </div>
+  </div>  
+
+  <div class="name">
+    <%= current_user_info['user_info']['name'] %> 
+  </div>
+
+  <div class="twitter">
+    @<%= current_user_info['user_info']['nickname'] %>
+  </div>
+</div>

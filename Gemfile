@@ -9,6 +9,8 @@ gem 'sqlite3'
 gem 'heroku'
 gem 'omniauth'
 gem 'formtastic'
+gem 'sass'
+gem 'compass'
 
 # Use unicorn as the web server
 # gem 'unicorn'

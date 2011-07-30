@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iGeek.at</title>
+  <%= stylesheet_link_tag 'screen.css', :media => 'screen, projection' %>
+  <%= stylesheet_link_tag 'print.css', :media => 'print' %>
+  <!--[if lt IE 8]><%= stylesheet_link_tag 'ie.css', :media => 'screen, projection' %><![endif]-->
+  <%= stylesheet_link_tag 'formtastic', 'my_formtastic_changes' %>
+  <!--[if IE 6]><%= stylesheet_link_tag 'formtastic_ie6' %><![endif]-->
+  <!--[if IE 7]><%= stylesheet_link_tag 'formtastic_ie7' %><![endif]--> 
+  <link href='http://fonts.googleapis.com/css?family=Kelly+Slab' rel='stylesheet' type='text/css'>   
+  <%= javascript_include_tag 'jquery', 'jquery_tweet', 'modernizr', 'jquery_lightbox', 'application' %>
+  <%= csrf_meta_tag %>
+</head>
+<body class="two-col">
+  <div id="container">
+    <%= render 'layouts/header' %>
+    <%= yield %>
+  </div>
+</body>
+</html>
+

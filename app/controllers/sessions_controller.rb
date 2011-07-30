@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     auth = request.env["omniauth.auth"]  
     user = User.find_by_provider_and_uid(auth["provider"], auth["uid"])
     if user 
-      session[:user_id] = user.id  
+      session[:user] = auth.except('extra') 
       redirection = { :path => geek_path(user.geek_id) , :notice => "Welcome Back!" }
     else
       session[:omniauth] = auth.except('extra')  
@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
   end 
 
   def destroy  
-    session[:user_id] = nil  
+    session[:user] = nil  
     redirect_to root_url, :notice => "Signed out!"  
   end
   
