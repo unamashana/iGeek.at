@@ -1,0 +1,33 @@
+<h1>What do you use?</h1>
+
+<input id="products" size="50" />
+
+<script type="text/javascript">
+
+  $("#products").bind( "keydown", function( event ) {
+				if ( event.keyCode === $.ui.keyCode.TAB &&
+						$( this ).data( "autocomplete" ).menu.active ) {
+					event.preventDefault();
+				}
+			}).autocomplete({
+				minLength: 0,
+        source: <%=raw @products.map(&:name).to_json%>,
+				focus: function() {
+					// prevent value inserted on focus
+					return false;
+				},
+				select: function( event, ui ) {
+					var terms = split( this.value );
+					// remove the current input
+					terms.pop();
+					// add the selected item
+					terms.push( ui.item.value );
+					// add placeholder to get the comma-and-space at the end
+					terms.push( "" );
+					this.value = terms.join( ", " );
+					return false;
+				}
+			});
+
+</script>
+

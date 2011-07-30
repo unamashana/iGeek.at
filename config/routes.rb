@@ -1,6 +1,10 @@
 Code::Application.routes.draw do
 
-  resources :products
+  resources :products 
+  
+  resources :users do
+    resources :products, :controller => :product_users
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -62,6 +66,6 @@ Code::Application.routes.draw do
   match "/setup" => "setup#index"
   match "/auth/:provider/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
-  resources :users
+  
   match "/:geek_id" => "users#show", :as => :geek  
 end
