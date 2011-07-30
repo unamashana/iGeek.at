@@ -59,7 +59,10 @@ body.two-col {
 }
 
 #header{
-    h1 {
+
+  margin-bottom: 30px;
+
+  h1 {
 		line-height: 65px;
                 color: black;
 		vertical-align: bottom;
@@ -69,10 +72,11 @@ body.two-col {
 		/*font-family: "Quattrocento", Georgia, serif;*/
                 font-family: 'Kelly Slab', cursive;
 	}
-    .user_info{
-      float:right;
-      padding-right: 50px;
-    }   
+  
+  .user_info{
+    float:right;
+    padding: 10px 50px;
+  }   
 }
 
 .clear{
@@ -82,8 +86,11 @@ body.two-col {
 #content{
   .block{
     display:inline;
-  }
-  .block:hover{
-    background: #ff0000;
+    margin-bottom: 40px;
+
+    img {
+      height: 90px;
+      width: 90px;
+    }
   }
 }

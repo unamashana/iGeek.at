@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :authenticate, :only => [:edit, :show]
+  before_filter :authenticate, :only => [:edit]
 
   layout 'app'
 
@@ -23,6 +23,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_geek_id params[:geek_id]
+    @products = @user.products
   end
 
   def edit 
