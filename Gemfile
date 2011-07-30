@@ -19,6 +19,7 @@ gem 'omniauth'
 gem 'formtastic'
 gem 'sass'
 gem 'compass'
+gem "gravtastic"
 
 # Use unicorn as the web server
 # gem 'unicorn'

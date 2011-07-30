@@ -54,6 +54,7 @@ GEM
       actionpack (>= 2.3.7)
       activesupport (>= 2.3.7)
       i18n (~> 0.4)
+    gravtastic (3.1.0)
     haml (3.1.2)
     heroku (2.4.0)
       launchy (>= 0.3.2)
@@ -169,6 +170,7 @@ DEPENDENCIES
   carrierwave
   compass
   formtastic
+  gravtastic
   heroku
   omniauth
   pg

@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  include Gravtastic
+  gravtastic :size => 40, :filetype => :gif
+  
   validates_presence_of :provider, :uid, :name, :email, :geek_id
   validates_uniqueness_of :email, :geek_id
   validates_uniqueness_of :uid, :scope => :provider
