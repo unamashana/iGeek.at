@@ -1,20 +1,12 @@
 <div id="content">
 
+  <%9.times do %>
   <% @products.each do |product|%>
     <div class="block">
       <%= image_tag product.icon.one_twenty_eight.url, :alt => product.name %>  
     </div> 
   <%end-%>
-  <% @products.each do |product|%>
-    <div class="block">
-      <%= image_tag product.icon.one_twenty_eight.url, :alt => product.name %>  
-    </div> 
-  <%end-%>
-  <% @products.each do |product|%>
-    <div class="block">
-      <%= image_tag product.icon.one_twenty_eight.url, :alt => product.name %>  
-    </div> 
-  <%end-%>
+<%end-%>
 </div>
 
 <div id="sidebar">
