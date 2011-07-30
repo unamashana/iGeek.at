@@ -76,20 +76,22 @@ body .button {
 
 
 header {	
-	margin: 0 auto;
+	margin: 70px auto 20px auto;
 	text-align: center;
 	background-position: bottom center no-repeat;
 	background-repeat: no-repeat;
 	width: 610px;
 	height: 85px;
+        font-weight:bold;
 }
 	h1 {
 		line-height: 85px;
 		vertical-align: bottom;
 		display: inline;
-		font-size: 40px;
+		font-size: 60px;
 		text-shadow: 2px 3px 4px #000;
-		font-family: "Quattrocento", Georgia, serif;
+		/*font-family: "Quattrocento", Georgia, serif;*/
+                font-family: 'Kelly Slab', cursive;
 	}
 
 #content {
@@ -98,6 +100,10 @@ header {
 	min-height: 122px;
 }
 
+#main_page {
+  margin: 0px auto;
+  width:840px;
+}
 #main_page section {
 	margin: 20px auto 30px auto;
 	width: 450px;
@@ -458,6 +464,14 @@ header {
   -moz-box-shadow: 0px 2px 4px rgba(0,0,0,0.3); -webkit-box-shadow: 0px 2px 4px rgba(0,0,0,0.3); box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
 }
 
+#geek{
+  float:right;
+  }
+
+.clear {
+  clear:both;
+}  
+
 .modal {
 		background-color:#fff;
 		display:none;
@@ -491,5 +505,14 @@ header {
 	width:35px;
 }
 
-        
+.left {
+ float:left;
+}
 
+.right {
+ float:right;
+}
+        
+.twit-button{
+  margin-left: 160px;
+}

@@ -2,7 +2,7 @@
   <link href="http://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Cantarell:regular,italic,bold" rel="stylesheet" type="text/css">
-
+ <link href='http://fonts.googleapis.com/css?family=Kelly+Slab' rel='stylesheet' type='text/css'>
   <script>
     $(document).ready(function(){
       $("#trigger").click(function(){
@@ -11,10 +11,10 @@
 	mask: {
 		color: '#fff',
 		loadSpeed: 200,
-		opacity: 0.5
+		opacity: 1
 	},
 
-	closeOnClick: true,
+	closeOnClick: false,
 	load: true
       });
     });
@@ -30,11 +30,13 @@
 	
   
 	<!-- Main page -->
-    <div id="main_page">
-  
-	  <!-- Header -->
+        <div id="main_page">
+          <div class="left">
+      	  <!-- Header -->
 	  <header>
-	    <h1>iGeek.at</h1> <!-- Set the page title -->
+          <h1>{ iGeek.at }</h1> <!-- Set the page title -->
+          <br/>
+          Your geek address on the net. Coming Soon.
 	  </header>
 	  
 	  <!-- Additional content -->
@@ -44,28 +46,23 @@
               <div id="trigger">Reserve your Geek ID Now!!!</div>
             </section>
 
-            <!-- Twitter -->
-		  <script src="javascripts/jquery.tweet.js"></script> <!-- Load jQuery Twitter library -->
-		  <script>
-			$(function() {
-				$("#tweet").tweet({			
-					username: "igeekat", // Your Twitter username
-					count: 1, // Number of tweets to show up
-					loading_text: "Loading tweets...",
-					fetch: 10, filter: function(t){ return ! /^@\w+/.test(t["tweet_raw_text"]); }, // Fetch more tweets and filter out replies
-					callback: function () {	$(".tweet_list").fadeIn(); }
-				});
-			});
-		  </script>
-		  <section class="twitter">
-			<div id="tweet"></div>
-		  </section>
-		  <!-- Twitter end -->
+                  <section>
+                    <div class="twit-button">
+                      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                    </div> 
+                  </section>
 
 		  
 	  </div>
-	  
-	</div>
+
+        </div>
+
+        <div class="right">
+          <img id="geek" src="/images/geek.png" alt="geek" width="200" height="585" />
+          <br class="clear"/>
+        </div>
+
+      </div>
 	<!-- Main page end -->
 
 	
