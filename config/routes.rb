@@ -58,5 +58,6 @@ Code::Application.routes.draw do
   root :to => "pages#index"
   match "/auth/:provider/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
-  resources :users  
+  resources :users
+  match "/:geek_id" => "users#show", :as => :geek  
 end

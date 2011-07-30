@@ -4,12 +4,12 @@ class SessionsController < ApplicationController
     user = User.find_by_provider_and_uid(auth["provider"], auth["uid"])
     if user 
       session[:user_id] = user.id  
-      redirect_path = root_url
+      redirection = { :path => geek_path(user.geek_id) , :notice => "Welcome Back!" }
     else
       session[:omniauth] = auth.except('extra')  
-      redirect_path = new_user_path
+      redirection = { :path => new_user_path, :notice => "We are almost done.. Give us the following" }
     end  
-    redirect_to redirect_path
+    redirect_to redirection[:path], :notice => redirection[:notice]
   end 
 
   def destroy  
