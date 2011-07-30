@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :authenticate, :only => [:edit]
+  before_filter :authenticate, :only => [:edit, :update]
 
   layout 'app'
 
@@ -28,5 +28,15 @@ class UsersController < ApplicationController
 
   def edit 
     @user = current_user
+  end
+
+  def update
+    @user = current_user
+    if @user.update_attributes(params[:user])
+      flash[:success] = "Your Profile has been successfully updated"
+      redirect_to edit_user(@user)
+    else
+      render :edit
+    end  
   end
 end
