@@ -1,5 +1,5 @@
 
-<h2><%= @user.name %> (<%= @user.geek_id %>)</h2>
+<h2><%= image_tag @user.gravatar_url %> <%= @user.name %> (<%= @user.geek_id %>)</h2>
 
 <div id="content">
   <%9.times do %>
@@ -12,16 +12,6 @@
 </div>
 
 <div id="sidebar">
-  <div class="pic_n_id">
-    <div class="pic">
-      <%= image_tag @user.image_url %>
-    </div> 
-
-    <div class="geekid">
-    </div>
-  </div>  
-
   <div class="name">
   </div>
-
 </div>
