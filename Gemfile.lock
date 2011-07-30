@@ -38,6 +38,8 @@ GEM
       net-ssh-gateway (>= 1.1.0)
     capistrano-ext (1.2.1)
       capistrano (>= 1.0.0)
+    carrierwave (0.5.4)
+      activesupport (~> 3.0)
     configuration (1.1.0)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -98,6 +100,7 @@ PLATFORMS
 DEPENDENCIES
   capistrano
   capistrano-ext
+  carrierwave
   heroku
   rails (= 3.0.7)
   rake (= 0.8.7)
