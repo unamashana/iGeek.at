@@ -37,7 +37,10 @@ form.bp {
 
 // Page layout can be done using mixins applied to your semantic classes and IDs:
 body.two-col {
+  //background-color: #E0E4CC;
   #container {
+    padding: 0 20px;
+    background-color: white;
     @include container; }
   #header, #footer {
     @include column($blueprint-grid-columns); }
@@ -56,26 +59,30 @@ body.two-col {
       @include column($block-columns);
     }
   } 
+  
+  a{
+    color: #69D2E7;
+    text-decoration: none;
+  }
 }
 
 #header{
 
+  padding-top: 10px;
   margin-bottom: 30px;
 
   h1 {
-		line-height: 65px;
-                color: black;
+    color: black;
 		vertical-align: bottom;
 		display: inline;
-		font-size: 40px;
+		font-size: 2em;
 		text-shadow: 2px 3px 2px #000;
-		/*font-family: "Quattrocento", Georgia, serif;*/
-                font-family: 'Kelly Slab', cursive;
 	}
   
   .user_info{
     float:right;
-    padding: 10px 50px;
+    padding: 0px 20px;
+    color: #ccc;
   }   
 }
 
@@ -83,7 +90,20 @@ body.two-col {
   clear:both;
 }
 
+h3 {
+  color: #FA6900;
+  font-size: 1.2em;
+
+}
+  
+h2 {
+  font-size: 3em;
+  margin-bottom: 35px;
+}
+
 #content{
+
+
   .block{
     display:inline;
     margin-bottom: 40px;
