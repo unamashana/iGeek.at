@@ -1,5 +1,5 @@
 /* Dark green color scheme */
 body { background-color: #537765; }
-header { background-image: url(../img/bg_header_dark_green.png); }
-#progressbar { background-image: url(../img/progressbar_fill_dark_green.png); }
-.subscribe input.submit { background-image: url(../img/form_button_dark_green.png); }
+header { background-image: url(../images/bg_header_dark_green.png); }
+#progressbar { background-image: url(../images/progressbar_fill_dark_green.png); }
+.subscribe input.submit { background-image: url(../images/form_button_dark_green.png); }
