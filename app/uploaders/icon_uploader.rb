@@ -37,17 +37,14 @@ class IconUploader < CarrierWave::Uploader::Base
   # end
   #
   
+  version :one_twenty_eight do
+    process :resize_to_fill => [128,128]
+  end
+
   version :fortyeight do
     process :resize_to_fill => [48,48]
   end
-
-  version :thirtytwo do
-    process :resize_to_fill => [32,32]
-  end
   
-  version :sixteen do
-    process :resize_to_fill => [16,16]
-  end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

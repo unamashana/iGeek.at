@@ -1,22 +1,20 @@
 <div id="content">
-  <div class="block">
-    <%= @user.inspect %>  
-  </div> 
-  <div class="block">
-    <%= @user.inspect %>  
-  </div>
-  <div class="block">
-    <%= @user.inspect %>  
-  </div>
-  <div class="block">
-    <%= @user.inspect %>  
-  </div>
-  <div class="block">
-    <%= @user.inspect %>  
-  </div>
-   <div class="block">
-    <%= @user.inspect %>  
-  </div>
+
+  <% @products.each do |product|%>
+    <div class="block">
+      <%= image_tag product.icon.one_twenty_eight.url, :alt => product.name %>  
+    </div> 
+  <%end-%>
+  <% @products.each do |product|%>
+    <div class="block">
+      <%= image_tag product.icon.one_twenty_eight.url, :alt => product.name %>  
+    </div> 
+  <%end-%>
+  <% @products.each do |product|%>
+    <div class="block">
+      <%= image_tag product.icon.one_twenty_eight.url, :alt => product.name %>  
+    </div> 
+  <%end-%>
 </div>
 
 <div id="sidebar">
@@ -34,6 +32,4 @@
     <%= @user.name %> 
   </div>
 
-  <div class="twitter">
-  </div>
 </div>
