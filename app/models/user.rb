@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-  mount_uploader :image, ProfileUploader
   validates_presence_of :provider, :uid, :name, :email, :geek_id
   validates_uniqueness_of :email, :geek_id
   validates_uniqueness_of :uid, :scope => :provider
