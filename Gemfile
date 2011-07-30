@@ -6,6 +6,7 @@ gem 'heroku'
 gem 'capistrano'
 gem 'capistrano-ext'
 gem 'carrierwave'
+gem 'formtastic'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
