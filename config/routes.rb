@@ -59,6 +59,7 @@ Code::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
   root :to => "pages#index"
+  match "/setup" => "setup#index"
   match "/auth/:provider/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
   resources :users
