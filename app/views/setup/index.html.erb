@@ -1,0 +1,39 @@
+<h1>What do you use?</h1>
+
+<input id="products" size="50" />
+
+<ul id="list">
+
+</ul>
+
+<script type="text/javascript">
+
+  $("#products").bind( "keydown", function( event ) {
+				if ( event.keyCode === $.ui.keyCode.TAB &&
+						$( this ).data( "autocomplete" ).menu.active ) {
+					event.preventDefault();
+				}
+			}).autocomplete({
+				minLength: 0,
+        source: <%=raw @autocomplete_array.to_json%>,
+				focus: function() {
+					// prevent value inserted on focus
+					return false;
+				},
+				select: function( event, ui ) {
+          term = ui.item;
+          console.log(term.label);
+          $.ajax('/users/<%=current_user.id%>/products?id=' + term.value, {
+            type: 'post',
+            success: function(data, status){
+              console.log(data);
+              $("#list").prepend("<li><img src='" + data.product.icon.thirtytwo.url + "'/> " + term.value + "</li>");
+            }
+          });
+          this.value = '';
+					return false;
+				}
+			});
+
+</script>
+
