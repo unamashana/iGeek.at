@@ -1,0 +1,9 @@
+<%= semantic_form_for @product, :html => { :enctype => "multipart/form-data"} do |form| %>
+  <%= form.input :name %>
+  <%= form.input :description %>
+  <%= form.input :icon, :as => :file%>
+  
+  <%= form.buttons %>
+
+<% end %>
+
