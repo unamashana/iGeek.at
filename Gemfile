@@ -15,6 +15,8 @@ gem 'rmagick'
 
 gem 'sqlite3'
 gem 'heroku'
+gem 'omniauth'
+gem 'formtastic'
 
 # Use unicorn as the web server
 # gem 'unicorn'

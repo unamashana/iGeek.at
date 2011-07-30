@@ -1,0 +1,7 @@
+development:
+  twitter_consumer_key: 'szJDZ7kq41YFPzTWm22T5w'
+  twitter_consumer_secret: 'otxecY0HrliNlJ5LPboUU8CkvEoyLCIvPwv36aiBxI'
+
+production:
+  twitter_consumer_key: 'Lbre479iP1AeyiSrRYci7A'
+  twitter_consumer_secret:  'Nf696jV4P3eJjpcJSmI01xW9ui4wzmYDoXg93F66FY'

@@ -36,7 +36,10 @@ namespace(:igeek_at) do
   end
 
   task :symlink, :roles => :app do
-    # Symlink sphinx index
+    run <<-CMD
+      ln -nfs #{shared_path}/assets/uploads #{release_path}/public/uploads
+    CMD
+
     run <<-CMD
       rm #{release_path}/public/system
     CMD
@@ -66,6 +69,12 @@ end
 
 namespace(:deploy) do
   task :restart, :role => :app do
+    run <<-CMD
+      cd #{release_path} && bundle exec rake db:migrate RAILS_ENV=production --trace
+    CMD
+    run <<-CMD
+      cd #{release_path} && bundle exec rake db:seed RAILS_ENV=production --trace
+    CMD
     run <<-CMD
       cd #{release_path} && touch tmp/restart.txt
     CMD
