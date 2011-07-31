@@ -37,8 +37,8 @@ class IconUploader < CarrierWave::Uploader::Base
   # end
   #
   
-  version :one_twenty_eight do
-    process :resize_to_fill => [128,128]
+  version :ninety do
+    process :resize_to_fill => [90,90]
   end
 
   version :fortyeight do
