@@ -38,11 +38,12 @@ body.two-col {
     $content-columns: ceil(2 * $blueprint-grid-columns / 3);
     // true means it's the last column in the row
     @include column($content-columns, true); 
-    .block{
-      $block-columns: 3;
-      @include column($block-columns);
-    }
   } 
+    
+  .block{
+    $block-columns: 3;
+    @include column($block-columns);
+  }
   
   a{
     color: #69D2E7;
@@ -114,7 +115,6 @@ body.two-col {
     color: #FA6900;
     font-size: 1.2em;
     margin-bottom: 10px;
-
   }
 
 }

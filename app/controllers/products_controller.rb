@@ -1,5 +1,8 @@
 class ProductsController < ApplicationController
 
+  before_filter :authenticate, :only => [:new, :create]
+  before_filter :check_admin, :only => [:new, :create]
+
   respond_to :html
   layout 'app'
 
@@ -18,4 +21,9 @@ class ProductsController < ApplicationController
     end
   end
 
+  private
+
+  def check_admin
+    redirect_to '/' unless [1,2].include? current_user.id
+  end
 end

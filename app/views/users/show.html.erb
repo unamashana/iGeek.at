@@ -2,6 +2,9 @@
 
 <div id="content">
   <div id="blocks">
+    <%if @products.empty?%>
+      <p><%=@user.name%> has not listed any apps yet :( </p>
+    <%end-%>
     <% @products.each do |product|%>
       <%= render :partial => 'products/product', :locals => {:product => product}%>
     <%end-%>
@@ -29,3 +32,5 @@
     </ul>
   </div>
 </div>
+
+<script type="text/javascript">var switchTo5x=false;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js&q… type="text/javascript">stLight.options({publisher:'60e3d898-73e3-46a3-be81-43546b4c25c5'});</script>
