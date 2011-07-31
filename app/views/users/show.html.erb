@@ -1,51 +1,17 @@
 <h2><%= image_tag @user.gravatar_url %> <%= @user.name %> (<%= @user.geek_id %>)</h2>
 
 <div id="content">
-  <% if false and current_user %>
-  <div id="auto_complete">
-  <h1>What do you use?</h1>
-  <input id="products" size="50" />
-  <script type="text/javascript">
-
-  $("#products").bind( "keydown", function( event ) {
-				if ( event.keyCode === $.ui.keyCode.TAB &&
-						$( this ).data( "autocomplete" ).menu.active ) {
-					event.preventDefault();
-				}
-			}).autocomplete({
-				minLength: 0,
-        source: <%=raw @autocomplete_array.to_json%>,
-				focus: function() {
-					// prevent value inserted on focus
-					return false;
-				},
-				select: function( event, ui ) {
-          term = ui.item;
-          console.log(term.label);
-          $.ajax('/users/<%=current_user.id%>/products?id=' + term.value, {
-            type: 'post',
-            success: function(data, status){
-              console.log(data);
-              $("#blocks").prepend("<div class=\"block\"><img src='" + data.product.icon.fortyeight.url + "'/> </div>");
-            }
-          });
-          this.value = '';
-					return false;
-				}
-			});
-
-                      </script>
-                    </div>
-  <% end %>
-
-  <div id="#blocks">
-  <% @products.each do |product|%>
-    <%= render :partial => 'products/product', :locals => {:product => product}%>
-  <%end-%>
+  <div id="blocks">
+    <% @products.each do |product|%>
+      <%= render :partial => 'products/product', :locals => {:product => product}%>
+    <%end-%>
   </div>
 </div>
 
 <div id="sidebar">
+  <div id="share" class="section">
+    <span  class='st_twitter_hcount' displayText='Tweet'></span><span  class='st_facebook_hcount' displayText='Facebook'></span><span  class='st_plusone_hcount' ></span>
+  </div>
   <div id="about" class="section">
     <h3> About </h3>
     <%= @user.about_me %>

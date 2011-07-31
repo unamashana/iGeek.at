@@ -143,14 +143,18 @@ h2 {
     margin-bottom: 20px;
   }
   #blocks, #list{
-  .block{
-    display:inline;
-    margin-bottom: 40px;
-
-    img {
-      height: 90px;
-      width: 90px;
+    .icon{
+      .close{
+      }
+    }  
+    .block{
+      display:inline;
+      margin-bottom: 40px;
+      
+      img {
+        height: 90px;
+        width: 90px;
+      }
     }
   }
-}
 }

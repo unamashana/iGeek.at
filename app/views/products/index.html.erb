@@ -1,0 +1,9 @@
+<div id="content">
+  <div id="blocks">
+    <% @products.each do |product|%>
+    <div class="block">
+      <%= image_tag product.icon.ninety.url, :alt => product.name %>  
+    </div> 
+  <%end-%>
+  </div>
+</div>
