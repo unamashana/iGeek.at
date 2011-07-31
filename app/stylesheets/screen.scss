@@ -22,11 +22,11 @@ body {
 // Page layout can be done using mixins applied to your semantic classes and IDs:
 body.two-col {
   //background-color: #E0E4CC;
-  #container {
+  #container, #footer .content {
+    min-height: 650px;
     padding: 0 20px;
-    background-color: white;
     @include container; }
-  #header, #footer {
+  #header {
     @include column($blueprint-grid-columns); }
   #sidebar {
     // One third of the grid columns, rounding down. With 24 cols, this is 8.
@@ -39,6 +39,17 @@ body.two-col {
     // true means it's the last column in the row
     @include column($content-columns, true); 
   } 
+
+  #footer {
+
+    clear: both;
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 1px dotted #ccc;
+    color: #999;
+
+
+  }
     
   .block{
     //$block-columns: 3;
