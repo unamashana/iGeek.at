@@ -8,6 +8,8 @@
       <%= render :partial => 'products/product', :locals => {:product => product}%>
     <%end-%>
   </div>
+
+  <%=link_to "Edit Your Profile", edit_user_path(current_user)%> | <a href="/<%=current_user.geek_id%>" class="view_profile">View Your Profile &raquo</a> 
 </div>
 
 <div id="sidebar">

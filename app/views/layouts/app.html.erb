@@ -17,6 +17,9 @@
 <body class="two-col">
   <div id="container">
     <%= render 'layouts/header' %>
+    <%if flash[:success]%>
+      <div class="success"><%=flash[:success]%></div>
+    <%end-%>
     <%= yield %>
   </div>
   <div id="footer">

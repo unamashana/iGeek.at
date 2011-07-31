@@ -175,9 +175,17 @@ h2 {
     margin-bottom: 20px;
   }
   #blocks, #list{
-    .icon{
-      .close{
-      }
-    }  
+    @include clearfix;
+    margin-bottom: 15px;
   }
+  a.view_profile {
+    clear: both;
+  }
+}
+
+.success {
+  padding: 10px 0px 10px 10px;
+  background-color: #C8D7AE;
+  clear: both;
+  margin-bottom: 10px;
 }
