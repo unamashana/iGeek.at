@@ -2,9 +2,10 @@
   <h1>{ iGeek.at }</h1>
   <div class="user_info">
     <% if current_user %>
-      <%= link_to 'Customize', '/setup' %> | <%= link_to 'Signout', signout_path %>
+      <%= link_to 'Customize', '/setup' %> | <%= link_to 'Edit Profile', edit_user_path(current_user) %> | <%= link_to 'Signout', signout_path %>
     <% else %>
-      <%= link_to 'Sign In Through Twitter', '/auth/twitter' %>
+      <%#= link_to 'Sign In Through Twitter', '/auth/twitter' %>
+      <a href="/">Claim your Geek address?</a>
     <% end %>  
   </div>
   <br class="clear"/>
