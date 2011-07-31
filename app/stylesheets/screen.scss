@@ -10,6 +10,7 @@
 // To generate css equivalent to the blueprint css but with your
 // configuration applied, uncomment:
 // @include blueprint
+@import "compass/utilities/lists/bullets";
 
 $blueprint_grid_columns : 24;
 $blueprint_container_size : 950px;
@@ -59,7 +60,7 @@ body.two-col {
 		vertical-align: bottom;
 		display: inline;
 		font-size: 2em;
-		text-shadow: 2px 3px 2px #000;
+		text-shadow: 1px 0px 1px #000;
 	}
   
   .user_info{
@@ -73,9 +74,48 @@ body.two-col {
   clear:both;
 }
 
-h3 {
-  color: #FA6900;
-  font-size: 1.2em;
+#sidebar {
+  
+  color: #999;
+
+  .section {
+    margin-bottom: 25px;
+  }
+
+  #contact {
+    ul {
+      @include no-bullet;
+
+      li.first {
+        //border-top: 1px solid #ccc;
+      }
+
+      li {
+        border-bottom: 1px solid #ececec;
+        padding: 5px 0px 7px 0px;
+
+        a.icon {
+          padding-left: 20px;
+        }
+
+        a.hn {
+          background: url('/images/hn.png') top left no-repeat;
+        }
+
+        a.github{
+          background: url('/images/ui/github.png') top left no-repeat;
+        }
+      }
+    }
+  }
+
+
+  h3 {
+    color: #FA6900;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+
+  }
 
 }
   
@@ -84,6 +124,12 @@ h2 {
   margin-bottom: 35px;
   font-family: helvetica,arial,freesans,clean,sans-serif; 
   letter-spacing: -1px; 
+
+  img {
+    vertical-align: middle;
+    border: 1px sold #ccc;
+    padding: 2px;
+  }
 }
 
 #content{

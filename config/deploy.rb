@@ -23,7 +23,7 @@ set :use_sudo,  false
 server "78.47.119.86", :app, :web, :db, :primary => true
 
 #after "deploy:update_code", "igeek_at:config", "bundler:bundle_new_release"
-after "deploy:update_code", "igeek_at:config", "bundler:bundle_new_release"
+after "deploy:update_code", "igeek_at:config", "bundler:bundle_new_release", "igeek_at:symlink"
 after "deploy", "deploy:cleanup"
 
 namespace(:igeek_at) do
