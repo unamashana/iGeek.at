@@ -1,12 +1,20 @@
 <h1>What do you use?</h1>
 
-<input id="products" size="50" />
+<div id="content">
+  <input id="products" size="50" />
 
-<ul id="list">
-
-</ul>
+  <div id="list">
+    <% @already_using.each do |product|%>
+      <%= render :partial => 'products/product', :locals => {:product => product}%>
+    <%end-%>
+  </div>
+</div>
 
 <script type="text/javascript">
+
+  var renderProduct = function(product){
+    return "<div class='block'><img src='" + product.icon.ninety.url + "'/></div>"
+  };
 
   $("#products").bind( "keydown", function( event ) {
 				if ( event.keyCode === $.ui.keyCode.TAB &&
@@ -27,7 +35,9 @@
             type: 'post',
             success: function(data, status){
               console.log(data);
-              $("#list").prepend("<li><img src='" + data.product.icon.fortyeight.url + "'/> " + term.value + "</li>");
+              script = $(data).text();
+              eval(script);
+          //    $("#list").prepend(renderProduct(data.product));
             }
           });
           this.value = '';

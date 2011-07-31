@@ -133,10 +133,16 @@ h2 {
 }
 
 #content{
-  #auto_complete{
+  #products{
     margin-bottom: 15px;
+    border: 1px solid #ccc;
+    height: 25px;
+    padding: 5px;
+    margin-top: 7px;
+    font-size: 1.1em;
+    margin-bottom: 20px;
   }
-  #blocks{
+  #blocks, #list{
   .block{
     display:inline;
     margin-bottom: 40px;
