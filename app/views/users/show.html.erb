@@ -17,10 +17,10 @@
   <div id="contact">
     <h3>On the web</h3>
     <ul>
-      <%if !@user.hn_username.empty? %>
+      <%if @user.hn_username and !@user.hn_username.empty? %>
         <li class="first"><a href="http://news.ycombinator.com/user?id=<%=@user.hn_username%>" rel="nofollow" class="hn icon"><%=@user.hn_username%></a>
       <%end%>
-      <%if !@user.github_username.empty? %>
+      <%if @user.github_username and !@user.github_username.empty? %>
         <li><a href="https://github.com/<%=@user.github_username%>" rel="nofollow" class="github icon"><%=@user.github_username%></a>
       <%end%>
     </ul>
