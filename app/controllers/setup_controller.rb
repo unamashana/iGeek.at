@@ -1,6 +1,6 @@
 class SetupController < ApplicationController
 
-  before_filter :authenticate, :check_admin
+  before_filter :authenticate
   layout 'app'
 
   def index
