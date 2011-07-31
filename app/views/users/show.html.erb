@@ -49,6 +49,9 @@
 </div>
 
 <div id="sidebar">
+  <div id="share" class="section">
+    <span  class='st_twitter_hcount' displayText='Tweet'></span><span  class='st_facebook_hcount' displayText='Facebook'></span><span  class='st_plusone_hcount' ></span>
+  </div>
   <div id="about" class="section">
     <h3> About </h3>
     <%= @user.about_me %>
@@ -63,7 +66,6 @@
       <%if @user.github_username and !@user.github_username.empty? %>
         <li><a href="https://github.com/<%=@user.github_username%>" rel="nofollow" class="github icon"><%=@user.github_username%></a>
       <%end%>
-      <li><span  class='st_twitter_hcount' displayText='Tweet'></span><span  class='st_facebook_hcount' displayText='Facebook'></span><span  class='st_plusone_hcount' ></span></li>
     </ul>
   </div>
 </div>
