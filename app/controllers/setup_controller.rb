@@ -7,7 +7,7 @@ class SetupController < ApplicationController
     @products = Product.all
     @already_using = current_user.products
     @autocomplete_array = @products.map {|p| {:label => p.name, :value => p.id} }
-    @popular = @products - @already_using
+    @popular = (@products - @already_using)[1..6]
   end
 
 end

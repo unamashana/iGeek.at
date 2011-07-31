@@ -41,8 +41,19 @@ body.two-col {
   } 
     
   .block{
-    $block-columns: 3;
-    @include column($block-columns);
+    //$block-columns: 3;
+    //@include column($block-columns);
+    float: left;
+    width: 90px;
+    height: 90px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+
+    img {
+      width: 90px;
+      height: 90px;
+    }
+
   }
   
   a{
@@ -76,6 +87,16 @@ body.two-col {
 }
 
 #sidebar {
+
+  #more_products {
+    margin-top: 25px;
+    @include clearfix;
+  }
+
+  a.more {
+    clear: both;
+    float: right;
+  }
   
   color: #999;
 
@@ -147,14 +168,5 @@ h2 {
       .close{
       }
     }  
-    .block{
-      display:inline;
-      margin-bottom: 40px;
-      
-      img {
-        height: 90px;
-        width: 90px;
-      }
-    }
   }
 }

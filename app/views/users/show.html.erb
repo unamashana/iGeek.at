@@ -5,9 +5,11 @@
     <%if @products.empty?%>
       <p><%=@user.name%> has not listed any apps yet :( </p>
     <%end-%>
+    <%5.times do %>
     <% @products.each do |product|%>
       <%= render :partial => 'products/product', :locals => {:product => product}%>
     <%end-%>
+  <%end-%>
   </div>
 </div>
 
