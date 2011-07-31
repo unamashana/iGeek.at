@@ -38,11 +38,23 @@ body.two-col {
     $content-columns: ceil(2 * $blueprint-grid-columns / 3);
     // true means it's the last column in the row
     @include column($content-columns, true); 
-    .block{
-      $block-columns: 3;
-      @include column($block-columns);
-    }
   } 
+    
+  .block{
+    //$block-columns: 3;
+    //@include column($block-columns);
+    float: left;
+    width: 90px;
+    height: 90px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+
+    img {
+      width: 90px;
+      height: 90px;
+    }
+
+  }
   
   a{
     color: #69D2E7;
@@ -75,6 +87,16 @@ body.two-col {
 }
 
 #sidebar {
+
+  #more_products {
+    margin-top: 25px;
+    @include clearfix;
+  }
+
+  a.more {
+    clear: both;
+    float: right;
+  }
   
   color: #999;
 
@@ -114,7 +136,6 @@ body.two-col {
     color: #FA6900;
     font-size: 1.2em;
     margin-bottom: 10px;
-
   }
 
 }
@@ -133,23 +154,19 @@ h2 {
 }
 
 #content{
-  #auto_complete{
+  #products{
     margin-bottom: 15px;
+    border: 1px solid #ccc;
+    height: 25px;
+    padding: 5px;
+    margin-top: 7px;
+    font-size: 1.1em;
+    margin-bottom: 20px;
   }
-  #blocks{
-  .icon{
-    .close{
-
-    }
-  }  
-  .block{
-    display:inline;
-    margin-bottom: 40px;
-    
-    img {
-      height: 90px;
-      width: 90px;
-    }
+  #blocks, #list{
+    .icon{
+      .close{
+      }
+    }  
   }
-}
 }

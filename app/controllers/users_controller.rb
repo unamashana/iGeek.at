@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:success] = "Signed In!!"
       session[:user] = session[:omniauth]
-      redirect_to geek_path(@user.geek_id)
+      redirect_to "/setup" #geek_path(@user.geek_id)
     else
       render :new
     end  
