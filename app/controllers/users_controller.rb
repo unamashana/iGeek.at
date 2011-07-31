@@ -23,6 +23,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_geek_id params[:geek_id]
+    @page_title = "#{@user.name} (#{@user.geek_id})'s geek address at iGeek.at"
     @products = @user.products
     all_products = Product.all
     @autocomplete_array = all_products.map {|p| {:label => p.name, :value => p.id} }
