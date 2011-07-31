@@ -27,7 +27,7 @@
             type: 'post',
             success: function(data, status){
               console.log(data);
-              $("#blocks").prepend("<div class=\"block\"><img src='" + data.product.icon.fortyeight.url + "'/> </div>");
+              $("#blocks").prepend("<div class=\"block\ icon"><img src='" + data.product.icon.fortyeight.url + "'/> </div>");
             }
           });
           this.value = '';
@@ -39,9 +39,9 @@
                     </div>
   <% end %>
 
-  <div id="#blocks">
+  <div id="blocks">
   <% @products.each do |product|%>
-    <div class="block">
+    <div class="block icon">
       <%= image_tag product.icon.ninety.url, :alt => product.name %>  
     </div> 
   <%end-%>
