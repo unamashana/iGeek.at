@@ -36,28 +36,36 @@
 	  <header>
           <h1>{ iGeek.at }</h1> <!-- Set the page title -->
           <br/>
-          Your geek address on the net. Coming Soon.
+          Show the world what you use and love! 
 	  </header>
 	  
 	  <!-- Additional content -->
 	  <div id="content"> &nbsp;
 	  
             <section>
-              <div id="trigger">Reserve your Geek ID Now!!!</div>
+              <%if false-%>
+                <div id="trigger">Reserve your Geek ID Now!!!</div>
+                <div id="wufoo" class="modal">
+                  <iframe src="https://spreadsheets.google.com/a/supportbee.com/spreadsheet/embeddedform?formkey=dFlQRjNaM3V6cWlYVllNaklTSW9xd0E6MQ" width="400" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                </div>
+              <%else-%>
+                <center><a href="/auth/twitter"><img src="/images/twitter_auth.png"/></a></center>
+              <%end-%>
             </section>
 
+
+                  <section>
+                    <div class="examples">
+                      <b>Latest Geeks: </b>
+                      <a href="/avinasha">Avinasha Shastry</a> <a href="/kar2905">Kartik Mandaville</a> <a href="/tHACKER">Varun Thacker</a> 
+                    </div>
+                  </section>     
+                  
                   <section>
                     <div class="twit-button">
                       <a href="http://twitter.com/share" class="twitter-share-button" data-text="iGeek.at http://bit.ly/p4MudR Your geek id, sign up now!" data-count="horizontal" data-via="AviShastry">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
                     </div> 
                   </section>
-
-                  <section>
-                    <div class="examples">
-                      <b>Latest Geek Profiles:</b> <br/>
-                      <a href="/prateekdayal">Prateek Dayal</a> | <a href="/avinasha">Avinasha Shastry</a> | <a href="/kar2905">Kartik Mandaville</a> | <br/><a href="/tHACKER">Varun Thacker</a> 
-                    </div>
-                  </section>     
 
 	  </div>
 
@@ -74,6 +82,3 @@
 	
     </div></div>
 
-    <div id="wufoo" class="modal">
-      <iframe src="https://spreadsheets.google.com/a/supportbee.com/spreadsheet/embeddedform?formkey=dFlQRjNaM3V6cWlYVllNaklTSW9xd0E6MQ" width="400" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-    </div>
