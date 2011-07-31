@@ -87,6 +87,7 @@ h2 {
 }
 
 #content{
+  #blocks{
   .block{
     display:inline;
     margin-bottom: 40px;
@@ -96,4 +97,5 @@ h2 {
       width: 90px;
     }
   }
+}
 }

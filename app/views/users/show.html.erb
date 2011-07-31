@@ -2,13 +2,50 @@
 <h2><%= image_tag @user.gravatar_url %> <%= @user.name %> (<%= @user.geek_id %>)</h2>
 
 <div id="content">
-  <%9.times do %>
+  <% if current_user %>
+  <div id="auto_complete">
+  <h1>What do you use?</h1>
+  <input id="products" size="50" />
+  <script type="text/javascript">
+
+  $("#products").bind( "keydown", function( event ) {
+				if ( event.keyCode === $.ui.keyCode.TAB &&
+						$( this ).data( "autocomplete" ).menu.active ) {
+					event.preventDefault();
+				}
+			}).autocomplete({
+				minLength: 0,
+        source: <%=raw @autocomplete_array.to_json%>,
+				focus: function() {
+					// prevent value inserted on focus
+					return false;
+				},
+				select: function( event, ui ) {
+          term = ui.item;
+          console.log(term.label);
+          $.ajax('/users/<%=current_user.id%>/products?id=' + term.value, {
+            type: 'post',
+            success: function(data, status){
+              console.log(data);
+              $("#blocks").prepend("<div class=\"block\"><img src='" + data.product.icon.fortyeight.url + "'/> </div>");
+            }
+          });
+          this.value = '';
+					return false;
+				}
+			});
+
+                      </script>
+                    </div>
+  <% end %>
+
+  <div id="#blocks">
   <% @products.each do |product|%>
     <div class="block">
       <%= image_tag product.icon.one_twenty_eight.url, :alt => product.name %>  
     </div> 
   <%end-%>
-<%end-%>
+  </div>
 </div>
 
 <div id="sidebar">
