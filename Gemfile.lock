@@ -61,6 +61,9 @@ GEM
       rest-client (~> 1.6.1)
       term-ansicolor (~> 1.0.5)
     highline (1.6.2)
+    hoptoad_notifier (2.4.11)
+      activesupport
+      builder
     i18n (0.5.0)
     launchy (0.3.7)
       configuration (>= 0.0.5)
@@ -172,6 +175,7 @@ DEPENDENCIES
   formtastic
   gravtastic
   heroku
+  hoptoad_notifier
   omniauth
   pg
   rails (= 3.0.7)

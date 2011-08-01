@@ -9,6 +9,8 @@ gem 'carrierwave'
 gem 'formtastic'
 gem 'pg'
 gem 'rmagick'
+gem 'hoptoad_notifier'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
