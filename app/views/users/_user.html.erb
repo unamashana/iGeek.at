@@ -1,0 +1,9 @@
+<div class="user">
+  <div class="thumb"><%= link_to image_tag(user.gravatar_url), geek_path(:geek_id => user.geek_id)%></div>
+  <div class="info">
+    <h3><%= link_to user.name, geek_path(:geek_id => user.geek_id)%></h3>
+    <div class="products">
+      <%= render :partial => 'products/product', :collection => user.products.limit(5), :locals => {:size => :small}%>
+    </div>
+  </div>
+</div>

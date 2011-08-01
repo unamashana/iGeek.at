@@ -21,6 +21,11 @@ class ProductsController < ApplicationController
     end
   end
 
+  def show
+    @product = Product.find_by_slug params[:id]
+    @users = @product.users
+  end
+
   private
 
   def check_admin

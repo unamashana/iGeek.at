@@ -1,5 +1,5 @@
 <div id="header">
-  <h1><a href="/">{ iGeek.at }</a></h1>
+  <div class="logo"><a href="/">{ iGeek.at }</a></h1></div>
   <div class="user_info">
     <% if current_user %>
       <%=link_to 'Profile', "/#{current_user.geek_id}"%> | <%=link_to 'Add/Remove Apps', '/setup'%> | <%= link_to 'Edit Profile', edit_user_path(current_user) %> | <%= link_to 'Logout', signout_path %>
