@@ -1,16 +1,17 @@
-<%= semantic_form_for @user do |form| %>
+<div id="content">
+  <%= semantic_form_for @user do |form| %>
 
-    <%= form.inputs :name => "User" do %>
-      <%= form.input :email, :label => "Email Address" %>
-      <%= form.input :about_me, :label => "About You" %>
-      <%= form.input :hn_username, :label => "Hacker News Username" %>
-      <%= form.input :github_username, :label => "Github Username" %>
-      <%= form.input :blog_url, :label => "Blog URL" %>
-    <% end %>
+      <%= form.inputs :name => "User" do %>
+        <%= form.input :email, :label => "Email Address" %>
+        <%= form.input :about_me, :label => "About You" %>
+        <%= form.input :hn_username, :label => "Hacker News Username" %>
+        <%= form.input :github_username, :label => "Github Username" %>
+        <%= form.input :blog_url, :label => "Blog URL", :as => :string %>
+      <% end %>
 
-    <%= form.buttons do %>
-      <%= form.commit_button %>
-    <% end %>
+      <%= form.buttons do %>
+        <%= form.commit_button %>
+      <% end %>
 
-<% end %>
+  <% end %>
 
