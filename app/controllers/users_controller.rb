@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
+    @user.geek_id = params[:user][:geek_id].downcase
     @user.provider = session[:omniauth]['provider']
     @user.uid = session[:omniauth]['uid']
     @user.name = session[:omniauth]['user_info']['name']
@@ -22,7 +23,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by_geek_id params[:geek_id]
+    @user = User.find_by_geek_id params[:geek_id].downcase
     @page_title = "#{@user.name} (#{@user.geek_id})'s geek address at iGeek.at"
     @products = @user.products
     all_products = Product.all
@@ -41,5 +42,11 @@ class UsersController < ApplicationController
     else
       render :edit
     end  
+  end
+
+  def random
+    @user = false
+    @user = User.random until @user
+    redirect_to geek_path(@user.geek_id)
   end
 end

@@ -9,4 +9,11 @@ class User < ActiveRecord::Base
 
   has_many  :product_users, :dependent => :destroy
   has_many  :products, :through => :product_users
+
+  def self.random
+    if (c = count) != 0
+      find(:first, :offset =>rand(c))
+    end
+  end
+  
 end

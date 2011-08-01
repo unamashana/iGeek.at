@@ -18,7 +18,11 @@
   </div>
   <div id="about" class="section">
     <h3> About </h3>
-    <%= @user.about_me %>
+    <% if !@user.about_me.nil? and !@user.about_me.empty? %>
+      <%= @user.about_me %>
+    <% elsif current_user == @user %>
+      <%= link_to "Edit", edit_user_path(@user) %>
+    <% end %>    
   </div>
 
   <div id="contact">
