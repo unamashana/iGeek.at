@@ -2,7 +2,7 @@
   <h1><a href="/">{ iGeek.at }</a></h1>
   <div class="user_info">
     <% if current_user %>
-      <%=link_to 'Profile', "/#{current_user.geek_id}"%> | <%=link_to 'Add/Remove Apps', '/setup'%> | <%= link_to 'Edit Profile', edit_user_path(current_user) %> | <%= link_to 'Logout', signout_path %>
+      <%= link_to 'Random Profile', random_users_path %> | <%=link_to 'Profile', "/#{current_user.geek_id}"%> | <%=link_to 'Add/Remove Apps', '/setup'%> | <%= link_to 'Edit Profile', edit_user_path(current_user) %> | <%= link_to 'Logout', signout_path %>
     <% else %>
       <%#= link_to 'Sign In Through Twitter', '/auth/twitter' %>
       <a href="/">Claim your Geek address?</a>

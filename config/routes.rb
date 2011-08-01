@@ -3,6 +3,9 @@ Code::Application.routes.draw do
   resources :products 
   
   resources :users do
+    collection do
+      get 'random'
+    end
     resources :products, :controller => :product_users
   end
 

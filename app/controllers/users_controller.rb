@@ -43,4 +43,10 @@ class UsersController < ApplicationController
       render :edit
     end  
   end
+
+  def random
+    @user = false
+    @user = User.random until @user
+    redirect_to geek_path(@user.geek_id)
+  end
 end
