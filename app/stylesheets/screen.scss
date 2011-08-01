@@ -78,7 +78,7 @@ body.two-col {
   padding-top: 10px;
   margin-bottom: 30px;
 
-  h1 {
+  .logo {
     color: black;
 		vertical-align: bottom;
 		display: inline;
@@ -200,7 +200,6 @@ h2 {
 
   h1 {
     float: left;
-
   }
 
 }
@@ -249,6 +248,3 @@ h2 {
 
 }
 
-.logo {
-  font-size: 2em;
-}
