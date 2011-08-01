@@ -1,5 +1,5 @@
 <div class="block">
-  <%if size and size == :small%>
+  <%if defined?(size) and size == :small%>
     <%= link_to image_tag(product.icon.fortyeight.url, :alt => product.name), product_path(product) %>  
   <%else-%>
     <%= link_to image_tag(product.icon.ninety.url, :alt => product.name), product_path(product) %>  
