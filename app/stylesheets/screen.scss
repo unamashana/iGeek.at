@@ -189,3 +189,66 @@ h2 {
   clear: both;
   margin-bottom: 10px;
 }
+
+.product_info {
+  img {
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin-right: 10px;
+  }
+
+  h1 {
+    float: left;
+
+  }
+
+}
+
+.user {
+
+  @include clearfix;
+  margin-bottom: 15px;
+  border-bottom: 1px dotted #ccc;
+
+  .thumb {
+    width: 52px;
+    float: right;
+    margin-left: 10px;
+
+    img {
+      border: 1px solid #ccc;
+      padding: 2px;
+    }
+  }
+
+  .info {
+    float: left;
+    font-size: 1.2em;
+
+    .products {
+      margin-top: 10px;
+    }
+
+    .block {
+      width: 50px;
+      margin: 0px;
+      height: 50px;
+    }
+
+    .block img {
+      width: 32px;
+      height: 32px;  
+    }
+
+    h3 {
+      font-size: 1.3em;
+    }
+  }
+
+
+}
+
+.logo {
+  font-size: 2em;
+}

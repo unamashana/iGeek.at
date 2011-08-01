@@ -54,6 +54,7 @@ GEM
       actionpack (>= 2.3.7)
       activesupport (>= 2.3.7)
       i18n (~> 0.4)
+    friendly_id4 (4.0.0.beta4)
     gravtastic (3.1.0)
     haml (3.1.2)
     heroku (2.4.0)
@@ -173,6 +174,7 @@ DEPENDENCIES
   carrierwave
   compass
   formtastic
+  friendly_id4 (= 4.0.0.beta4)
   gravtastic
   heroku
   hoptoad_notifier

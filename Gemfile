@@ -10,6 +10,7 @@ gem 'formtastic'
 gem 'pg'
 gem 'rmagick'
 gem 'hoptoad_notifier'
+gem "friendly_id4", "4.0.0.beta4", :require => "friendly_id"
 
 
 # Bundle edge Rails instead:
