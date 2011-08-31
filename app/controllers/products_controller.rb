@@ -24,6 +24,7 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find_by_slug params[:id]
     @users = @product.users
+    @page_title = "Who uses #{@product.name}?"
   end
 
   private
