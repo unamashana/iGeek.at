@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     @user.uid = session[:omniauth]['uid']
     @user.name = session[:omniauth]['user_info']['name']
     if @user.save
-      flash[:success] = "Signed In!!"
+      flash[:success] = "Signed In!!! Start adding apps below. Also setup your profile <a href=\"#{edit_user_path(@user)}\">here</a>".html_safe
       session[:user] = session[:omniauth]
       redirect_to "/setup" #geek_path(@user.geek_id)
     else
