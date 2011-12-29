@@ -11,7 +11,7 @@ set :deploy_to, "/home/rails/apps/#{application}"
 
 # Server is defined in stage specific file
 set :user, 'rails'    
-set :rvm_ruby_string, '1.9.2' # Defaults to 'default'
+set :rvm_ruby_string, '1.9.2-p180' # Defaults to 'default'
 
 #set :scm_user,  Proc.new { Capistrano::CLI.ui.ask("SVN username: ")}
 #set :scm_password, Proc.new { Capistrano::CLI.password_prompt("SVN password for #{scm_user}: ")} 
@@ -20,7 +20,7 @@ set :deploy_via, :remote_cache
 
 set :use_sudo,  false
 
-server "78.47.119.86", :app, :web, :db, :primary => true
+server "176.9.76.39", :app, :web, :db, :primary => true
 
 #after "deploy:update_code", "igeek_at:config", "bundler:bundle_new_release"
 after "deploy:update_code", "igeek_at:config", "bundler:bundle_new_release", "igeek_at:symlink"
